@@ -92,3 +92,7 @@ window.addEventListener("resize", function () {
   canvas.height = this.innerHeight;
   init();
 });
+setInterval(function () {
+  mouse.x = undefined;
+  mouse.y = undefined;
+}, 1000);
