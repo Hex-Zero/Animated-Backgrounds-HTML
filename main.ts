@@ -29,7 +29,7 @@ Particle.prototype.update = function () {
   }
   this.x += this.directionX;
   this.y += this.directionY;
-  this.draw;
+  this.draw();
 };
 
 function init() {
