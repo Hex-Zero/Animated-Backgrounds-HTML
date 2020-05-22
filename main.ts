@@ -1,7 +1,7 @@
 const canvas: any = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 ctx.canvas.width = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
+ctx.canvas.height = window.outerHeight;
 
 let particleArray;
 function Particle(x, y, directionX, directionY, size, color) {
@@ -38,8 +38,8 @@ function init() {
     let size = Math.random() * 10;
     let x = Math.random() * (innerWidth - size * 2);
     let y = Math.random() * (innerHeight - size * 2);
-    let directionX = Math.random() * 2 - 0.2;
-    let directionY = Math.random() * 2 - 0.2;
+    let directionX = Math.random() * 2 - 0.4;
+    let directionY = Math.random() * 1 - 0.4;
     let color = "white";
     particleArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
