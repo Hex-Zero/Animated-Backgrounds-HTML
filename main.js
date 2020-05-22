@@ -2,7 +2,7 @@ var canvas = document.getElementById("canvas1");
 var ctx = canvas.getContext("2d");
 ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
-var particleArray = [];
+var particleArray;
 function Particle(x, y, directionX, directionY, size, color) {
     this.x = x;
     this.y = y;
@@ -29,12 +29,13 @@ Particle.prototype.update = function () {
     this.draw();
 };
 function init() {
-    for (var i = 0; i < 100; i++) {
-        var size = Math.random() * 20;
+    particleArray = [];
+    for (var i = 0; i < 200; i++) {
+        var size = Math.random() * 10;
         var x = Math.random() * (innerWidth - size * 2);
         var y = Math.random() * (innerHeight - size * 2);
-        var directionX = Math.random() * 0.4 - 0.2;
-        var directionY = Math.random() * 0.4 - 0.2;
+        var directionX = Math.random() * 2 - 0.2;
+        var directionY = Math.random() * 2 - 0.2;
         var color = "white";
         particleArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
@@ -48,3 +49,8 @@ function animate() {
 }
 init();
 animate();
+window.addEventListener("resize", function () {
+    canvas.width = this.innerWidth;
+    canvas.height = this.innerHeight;
+    init();
+});

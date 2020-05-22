@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
-const particleArray = [];
+let particleArray;
 function Particle(x, y, directionX, directionY, size, color) {
   this.x = x;
   this.y = y;
@@ -33,12 +33,13 @@ Particle.prototype.update = function () {
 };
 
 function init() {
-  for (let i = 0; i < 100; i++) {
-    let size = Math.random() * 20;
+  particleArray = [];
+  for (let i = 0; i < 200; i++) {
+    let size = Math.random() * 10;
     let x = Math.random() * (innerWidth - size * 2);
     let y = Math.random() * (innerHeight - size * 2);
-    let directionX = Math.random() * 0.4 - 0.2;
-    let directionY = Math.random() * 0.4 - 0.2;
+    let directionX = Math.random() * 2 - 0.2;
+    let directionY = Math.random() * 2 - 0.2;
     let color = "white";
     particleArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
@@ -54,3 +55,10 @@ function animate() {
 
 init();
 animate();
+
+window.addEventListener("resize", function () {
+  canvas.width = this.innerWidth;
+  canvas.height = this.innerHeight;
+
+  init();
+});
