@@ -5,7 +5,7 @@ const intrest = (amount, percent, period) => {
   }
   console.log(result);
 };
-intrest(1, 4, 365);
+intrest(10000, 1, 1000);
 // let canvas = document.getElementById("canvas1");
 // let ctx = canvas.getContext("2d");
 // ctx.canvas.width = window.innerWidth;
