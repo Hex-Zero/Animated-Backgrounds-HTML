@@ -25,7 +25,7 @@ const intrest = () => {
     result += (result / 100) * percentValue;
   }
   document.getElementById("result").innerHTML =
-    numberWithCommas(Math.floor(result)) + " £";
+    "£ " + numberWithCommas(Math.floor(result));
 };
 
 let calculate = document
