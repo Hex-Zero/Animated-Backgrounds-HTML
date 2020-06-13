@@ -3,15 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="./main.js" defer></script>
     <title>Canvas - Animated</title>
   </head>
   <body>
-    <input type="number" id="amount-input" value="300" />
-    <input type="number" id="percent-input" value="3" />
-    <input type="number" id="period-input" value="355" />
-    <button id="calculate-button">Calculate</button>
-    <h1 id="result">0</h1>
+    <div class="calculator">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">£</span>
+        </div>
+        <input
+          id="amount-input"
+          type="number"
+          class="form-control"
+          aria-label="Amount (to the nearest dollar)"
+          value="300"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text">.00</span>
+        </div>
+      </div>
+      <label for="formControlRange" id="percent-label">Percent </label>
+      <input
+        step="0.1"
+        type="range"
+        class="form-control-range"
+        id="percent-input"
+        min="0.1"
+        max="7"
+        value="3"
+      />
+      <input class="form-control" type="number" id="period-input" value="355" />
+      <button id="calculate-button" class="btn btn-primary">Calculate</button>
+      <h1 id="result">0</h1>
+    </div>
   </body>
 </html>

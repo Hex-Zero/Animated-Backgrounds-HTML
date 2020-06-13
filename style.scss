@@ -4,9 +4,9 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-canvas {
+body {
   background-color: rebeccapurple;
 }
-input {
-  font-size: 19px;
+.calculator {
+  width: 250px;
 }
