@@ -5,6 +5,30 @@
   overflow: hidden;
   color: white;
 }
+.btn-warning {
+  color: #f0f0f0;
+  background-color: #1d0000;
+  border-color: #000000;
+  &:hover {
+    background-color: black;
+    color: #ffffff;
+    border-color: #000000;
+  }
+  &:focus {
+    background-color: black;
+    color: #ffffff;
+    border-color: #000000;
+    box-shadow: none;
+  }
+}
+.btn {
+  &:active {
+    background-color: rgb(54, 0, 0) !important;
+    color: #ffffff !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;
+  }
+}
 body {
   background-color: rebeccapurple;
   display: grid;
