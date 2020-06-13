@@ -17,7 +17,7 @@
     <div class="calculator">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text">£</span>
+          <span class="input-group-text amount">£</span>
         </div>
         <input
           id="amount-input"
@@ -27,9 +27,9 @@
           value="300"
         />
       </div>
-      <div class="input-group mb-3">
+      <div class="input-group mb-3 percent-group">
         <div class="input-group-prepend">
-          <span class="input-group-text">%</span>
+          <span class="input-group-text percent">%</span>
         </div>
         <input
       
@@ -43,7 +43,7 @@
       <input
         step="0.1"
         type="range"
-        class="form-control-range"
+        class="form-control-range custom-range"
         id="percent-input"
         min="0.1"
         max="7"
@@ -51,7 +51,7 @@
       />
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text">&#x1F551</span>
+          <span class="input-group-text period">&#x1F551</span>
         </div>
         <input
       
@@ -62,7 +62,7 @@
 
         />
       </div>
-      <button id="calculate-button" class="btn btn-primary">Calculate</button>
+      <button id="calculate-button" class="btn btn-warning">Calculate</button>
     </div>
     <h1 id="result">0 £</h1>
   </body>

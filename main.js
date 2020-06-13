@@ -8,7 +8,9 @@ const percentChange = () => {
   percentLabel.value = percentInput.value;
 };
 percentChange();
-percentInput.addEventListener("input", () => percentChange());
+percentInput.addEventListener("input", () => {
+  percentChange(), intrest();
+});
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -25,7 +27,6 @@ const intrest = () => {
   document.getElementById("result").innerHTML =
     numberWithCommas(Math.floor(result)) + " £";
 };
-console.log(parseInt(document.getElementById("percent-input").value));
 
 let calculate = document
   .getElementById("calculate-button")
