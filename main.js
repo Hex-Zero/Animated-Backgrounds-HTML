@@ -5,7 +5,7 @@ let percentInput = document.getElementById("percent-input");
 let percentLabel = document.getElementById("percent-label");
 
 const percentChange = () => {
-  percentLabel.innerHTML = `Percent ${percentInput.value} %`;
+  percentLabel.value = percentInput.value;
 };
 percentChange();
 percentInput.addEventListener("input", () => percentChange());
@@ -16,7 +16,7 @@ function numberWithCommas(x) {
 
 const intrest = () => {
   amountValue = parseInt(document.getElementById("amount-input").value);
-  percentValue = parseFloat(percentInput.value);
+  percentValue = parseFloat(percentLabel.value);
   periodValue = parseInt(document.getElementById("period-input").value);
   let result = amountValue;
   for (let i = 0; i < periodValue; i++) {

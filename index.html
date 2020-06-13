@@ -26,11 +26,20 @@
           aria-label="Amount (to the nearest dollar)"
           value="300"
         />
-        <div class="input-group-append">
-          <span class="input-group-text">.00</span>
-        </div>
       </div>
-      <label for="formControlRange" id="percent-label">Percent </label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">%</span>
+        </div>
+        <input
+      
+          type="number"
+          class="form-control"
+          aria-label="Amount (to the nearest dollar)"
+          id="percent-label" value="3"
+
+        />
+      </div>
       <input
         step="0.1"
         type="range"
@@ -40,9 +49,21 @@
         max="7"
         value="3"
       />
-      <input class="form-control" type="number" id="period-input" value="355" />
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">&#x1F551</span>
+        </div>
+        <input
+      
+          type="number"
+          class="form-control"
+          aria-label="Amount (to the nearest dollar)"
+          id="period-input" value="355"
+
+        />
+      </div>
       <button id="calculate-button" class="btn btn-primary">Calculate</button>
-      <h1 id="result">0</h1>
     </div>
+    <h1 id="result">0 £</h1>
   </body>
 </html>
