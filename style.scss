@@ -88,6 +88,12 @@ input {
   border-color: #1e0033;
   color: white;
 }
+.input-group-append {
+  .input-group-text {
+    background-color: #003573;
+    border-color: #00234c;
+  }
+}
 
 .custom-range {
   &:focus {
